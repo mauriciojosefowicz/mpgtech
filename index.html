@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPG Tech | Mauricio Josefowicz: Soluções Têxteis</title>
+    
+    <style>
+        /* Paleta de Cores baseada no logo MPG Tech */
+        :root {
+            --cor-primaria: #1a237e; /* Azul Marinho (Principal) */
+            --cor-secundaria: #3949ab; /* Azul Médio (Menu/Hover) */
+            --cor-destaque: #ffb300; /* Amarelo/Laranja (Destaque) */
+            --cor-fundo: #ffffff; /* Fundo do corpo e cabeçalho principal: Branco */
+            --cor-texto: #333;
+        }
+
+        /* Estilos Globais */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 0;
+        }
+        
+        /* Links de Contato (Remoção do Sublinhado) */
+        #contato a, .contato-header a, footer a {
+            text-decoration: none; 
+            color: var(--cor-primaria); 
+            transition: color 0.3s;
+        }
+
+        #contato a:hover {
+            color: var(--cor-destaque);
+        }
+
+        /* Cabeçalho e Logo */
+        header {
+            background-color: var(--cor-fundo); 
+            padding: 20px 0 0; 
+            text-align: center;
+            border-bottom: 5px solid var(--cor-secundaria); 
+        }
+        
+        .logo {
+            max-width: 250px; 
+            height: auto;
+            margin-bottom: 0;
+        }
+
+        /* Barra de Contato Rápido (Top Bar) */
+        .contato-header {
+            background-color: var(--cor-destaque);
+            color: var(--cor-primaria);
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .contato-header a {
+            color: var(--cor-primaria);
+            text-decoration: none;
+            margin: 0 5px;
+            transition: color 0.3s;
+        }
+
+        .contato-header a:hover {
+            color: white;
+        }
+
+        /* Navegação (Menu) */
+        nav {
+            background-color: var(--cor-secundaria);
+            padding: 15px 0; 
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            transition: background-color 0.3s;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: var(--cor-primaria);
+        }
+
+        /* Títulos de Seção */
+        section {
+            padding: 50px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h2 {
+            color: var(--cor-primaria);
+            border-bottom: 3px solid var(--cor-destaque);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        /* Seção de Destaque (Minha Proposta) */
+        .destaque {
+            background-color: #f0f0ff; 
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border-left: 5px solid var(--cor-destaque);
+            font-size: 1.1em;
+        }
+
+        /* Listas de Produtos */
+        section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section ul li {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="%23ffb300"/></svg>') no-repeat left center;
+            background-size: 10px;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        /* Estilos do Carrossel 3x1 (Três imagens lado a lado) */
+        .carrossel-3x1 {
+            text-align: center;
+            margin: 20px auto 30px;
+            position: relative;
+            /* Altura ajustada para 300px + padding (cerca de 310px) */
+            height: 320px; 
+            overflow: hidden; 
+        }
+        
+        .carrossel-bloco {
+            display: flex;
+            justify-content: center;
+            gap: 15px; 
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0; 
+            transition: opacity 1s ease-in-out; 
+        }
+
+        .carrossel-bloco.ativo {
+            opacity: 1; 
+        }
+        
+        .carrossel-bloco img {
+            /* TAMANHO AJUSTADO PARA 300px */
+            max-width: 300px; 
+            height: 300px; 
+            object-fit: cover; 
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 4px;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--cor-primaria);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 0;
+        }
+
+        /* Responsividade (Para visualização em Celular) */
+        @media (max-width: 768px) {
+            .carrossel-3x1 {
+                height: 100px; /* Mantemos pequeno no celular */
+            }
+            .carrossel-bloco img {
+                 max-width: 80px; 
+                 height: 80px; 
+            }
+            .carrossel-bloco {
+                gap: 5px;
+            }
+            .contato-header span { display: block; margin-bottom: 5px; }
+            nav a { display: block; margin: 5px 0; padding: 10px 0; }
+            .container { width: 95%; }
+            .logo { max-width: 200px; }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="contato-header">
+        <span>Mauricio Josefowicz | </span>
+        <a href="tel:+5547999977900">(47) 99997-7900</a> |
+        <a href="mailto:mauricio.mpgtech@gmail.com">mauricio.mpgtech@gmail.com</a> |
+        <a href="https://www.instagram.com/mpgtech" target="_blank">Instagram: @mpgtech</a>
+    </div>
+
+    <header>
+        <img src="imagens/mpg_logo.png" alt="Logo MPG Tech - Soluções Têxteis" class="logo">
+        <nav>
+            <a href="#proposta">Minha Proposta</a>
+            <a href="#aviamentos">Aviamentos</a>
+            <a href="#tinturaria">Tinturaria</a>
+            <a href="#fios">Fios Têxteis</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section id="proposta">
+            <h2>Sua Conexão Estratégica no Setor Têxtil</h2>
+            <div class="destaque">
+                <p>Com foco em eficiência, qualidade e atendimento consultivo, sou o elo entre sua confecção e três das maiores referências do mercado nacional. Minha missão é entender as demandas da sua produção, seja em pequeno, médio ou grande porte, e fornecer as melhores soluções em insumos e serviços.</p>
+                <p>Otimize sua cadeia de suprimentos contando com a excelência em fios, aviamentos e tinturaria.</p>
+            </div>
+        </section>
+        
+        <section id="aviamentos" class="empresa-circulo">
+            <h2>Círculo | Aviamentos Industriais: Linhas e Zíperes</h2>
+            
+            <div class="carrossel-3x1" id="carrossel-circulo">
+                <div class="carrossel-bloco ativo">
+                    <img src="imagens/circulo_fitas_1.png" alt="Fitas Círculo"> 
+                    <img src="imagens/circulo_linha_overlock_1.png" alt="Linha Overlock Círculo"> 
+                    <img src="imagens/circulo_linha120_1.png" alt="Linha 120 Círculo"> 
+                </div>
+                <div class="carrossel-bloco">
+                    <img src="imagens/circulo_ziper_1.png" alt="Zíper Círculo"> 
+                    <img src="imagens/circulo_fitas_1.png" alt="Fitas Círculo"> 
+                    <img src="imagens/circulo_linha_overlock_1.png" alt="Linha Overlock Círculo"> 
+                </div>
+            </div>
+
+            <p>Representando a linha completa de insumos essenciais para a sua confecção. Fornecimento direto e consultoria para especificação correta de produtos, garantindo performance e durabilidade em todas as etapas de costura e acabamento.</p>
+            <ul>
+                <li>Linhas de costura, reta e overlock, de alta resistência, para máquinas de alto desempenho.</li>
+                <li>Zíperes para diversos segmentos e aplicações | fixo | destacável | invisível | metal | tratorado.</li>
+                <li>Ampla variedade de aviamentos e acessórios, como tesouras, colas, fitas e muito mais.</li>
+            </ul>
+        </section>
+
+        <section id="tinturaria" class="empresa-gs">
+            <h2>GS Tinturaria | Serviços Especializados em Tingimento de Malha</h2>
+            
+             <div class="carrossel-3x1" id="carrossel-gs">
+                <div class="carrossel-bloco ativo">
+                    <img src="imagens/gs_acabamento_1.png" alt="Serviço de Acabamento GS"> 
+                    <img src="imagens/gs_acabamento_2.png" alt="Detalhe de Acabamento GS"> 
+                    <img src="imagens/gs_acabamento_3.png" alt="Visualização de Acabamento GS"> 
+                </div>
+                <div class="carrossel-bloco">
+                    <img src="imagens/gs_maquinas_1.png" alt="Máquinas de Tingimento"> 
+                    <img src="imagens/gs_rama_1.png" alt="Máquina de Rama"> 
+                    <img src="imagens/gs_acabamento_1.png" alt="Serviço de Acabamento GS"> 
+                </div>
+            </div>
+
+            <p>O parceiro ideal para o serviço de valor agregado que sua malha exige. A GS Tinturaria oferece qualidade, uniformidade de cor e pontualidade, elementos cruciais para a gestão de produção de empresas de todos os portes.</p>
+            <p>Foco na excelência do processo para garantir que sua matéria-prima atinja o padrão de cor e toque desejado.</p>
+        </section>
+
+        <section id="fios" class="empresa-cremer">
+            <h2>Cremer | Fios Têxteis de Poliamida (Nylon)</h2>
+            
+            <div class="carrossel-3x1" id="carrossel-cremer">
+                <div class="carrossel-bloco ativo">
+                    <img src="imagens/cremer_homem_1.png" alt="Fios Cremer (Modelo Masculino)"> 
+                    <img src="imagens/cremer_mulher_1.png" alt="Fios Cremer (Modelo Feminino)"> 
+                    <img src="imagens/cremer_pecas_1.png" alt="Peças Têxteis Cremer"> 
+                </div>
+                <div class="carrossel-bloco">
+                    <img src="imagens/cremer_pecas_2.png" alt="Detalhe de Peça Têxtil Cremer"> 
+                    <img src="imagens/cremer_pecas_3.png" alt="Conjunto de Peças Cremer"> 
+                    <img src="imagens/cremer_homem_1.png" alt="Fios Cremer (Modelo Masculino)"> 
+                </div>
+            </div>
+
+            <p>Os fios de poliamida importados e distribuídos pela Cremer são sinônimo de tecnologia e performance no desenvolvimento de tecidos.</p>
+            <p>Ofereço acesso direto a este insumo de alto valor, ideal para produtos que exigem toque macio, resistência e excelência em malharia e tecelagem.</p>
+            <ul>
+                <li>Distribuição, importação direta e financiamento de importação são modalidades que disponibilizamos para nossos clientes.</li>
+                <li>Entre em contato para especificações técnicas, cotações de volume e prazos de entrega.</li>
+            </ul>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato Agora</h2>
+            <p>Sua produção não pode parar. Estou pronto para atender suas necessidades e garantir o melhor custo-benefício em insumos e serviços. Fale comigo:</p>
+            <p>
+                <strong>Mauricio Josefowicz</strong><br>
+                Telefone/WhatsApp: <a href="https://wa.me/5547999977900" target="_blank"><strong>(47) 99997-7900</strong></a><br>
+                E-mail: <a href="mailto:mauricio.mpgtech@gmail.com"><strong>mauricio.mpgtech@gmail.com</strong></a><br>
+                Siga-me no Instagram: <a href="https://www.instagram.com/mpgtech" target="_blank"><strong>@mpgtech</strong></a>
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mauricio Josefowicz - Representação Comercial.</p>
+    </footer>
+
+    <script>
+        function iniciarCarrossel(idCarrossel, intervalo) {
+            const carrossel = document.getElementById(idCarrossel);
+            if (!carrossel) return;
+
+            // Seleciona diretamente os blocos de 3 imagens dentro do carrossel
+            const blocos = carrossel.querySelectorAll('.carrossel-bloco');
+            let indiceAtual = 0;
+
+            function mostrarBloco(indice) {
+                // Remove a classe 'ativo' de todos os blocos
+                for (let i = 0; i < blocos.length; i++) {
+                    blocos[i].classList.remove('ativo');
+                }
+                // Adiciona a classe 'ativo' ao bloco desejado
+                if (blocos[indice]) {
+                    blocos[indice].classList.add('ativo');
+                }
+            }
+
+            function proximoBloco() {
+                indiceAtual++;
+                if (indiceAtual >= blocos.length) {
+                    indiceAtual = 0; // Volta para o início
+                }
+                mostrarBloco(indiceAtual);
+            }
+
+            // Garante que o carrossel comece exibindo o primeiro bloco
+            mostrarBloco(indiceAtual);
+
+            // Inicia o intervalo de troca automática (5000ms = 5 segundos)
+            setInterval(proximoBloco, intervalo);
+        }
+
+        // Inicia o carrossel para cada seção com intervalo de 5000ms (5 segundos)
+        iniciarCarrossel('carrossel-circulo', 5000);
+        iniciarCarrossel('carrossel-gs', 5000);
+        iniciarCarrossel('carrossel-cremer', 5000);
+    </script>
+
+</body>
+</html>
