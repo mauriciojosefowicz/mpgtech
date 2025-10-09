@@ -277,7 +277,7 @@
         </section>
 
         <section id="fios" class="empresa-cremer">
-            <h2>Cremer | Fios Têxteis de Poliamida (Nylon)</h2>
+            <h2>Cremer Erzkontor | Fios Têxteis de Poliamida (Nylon)</h2>
             
             <div class="carrossel-3x1" id="carrossel-cremer">
                 <div class="carrossel-bloco ativo">
@@ -322,16 +322,13 @@
             const carrossel = document.getElementById(idCarrossel);
             if (!carrossel) return;
 
-            // Seleciona diretamente os blocos de 3 imagens dentro do carrossel
             const blocos = carrossel.querySelectorAll('.carrossel-bloco');
             let indiceAtual = 0;
 
             function mostrarBloco(indice) {
-                // Remove a classe 'ativo' de todos os blocos
                 for (let i = 0; i < blocos.length; i++) {
                     blocos[i].classList.remove('ativo');
                 }
-                // Adiciona a classe 'ativo' ao bloco desejado
                 if (blocos[indice]) {
                     blocos[indice].classList.add('ativo');
                 }
@@ -340,23 +337,4 @@
             function proximoBloco() {
                 indiceAtual++;
                 if (indiceAtual >= blocos.length) {
-                    indiceAtual = 0; // Volta para o início
-                }
-                mostrarBloco(indiceAtual);
-            }
-
-            // Garante que o carrossel comece exibindo o primeiro bloco
-            mostrarBloco(indiceAtual);
-
-            // Inicia o intervalo de troca automática (5000ms = 5 segundos)
-            setInterval(proximoBloco, intervalo);
-        }
-
-        // Inicia o carrossel para cada seção com intervalo de 5000ms (5 segundos)
-        iniciarCarrossel('carrossel-circulo', 5000);
-        iniciarCarrossel('carrossel-gs', 5000);
-        iniciarCarrossel('carrossel-cremer', 5000);
-    </script>
-
-</body>
-</html>
+                    indiceAtual = 0
