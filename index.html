@@ -135,15 +135,18 @@
             padding-left: 20px;
             margin-bottom: 8px;
         }
-
-        /* Estilos do Carrossel 3x1 (Três imagens lado a lado) */
+        
+        /* --- Estilos do Carrossel Dinâmico --- */
         .carrossel-3x1 {
             text-align: center;
             margin: 20px auto 30px;
             position: relative;
-            /* Altura ajustada para 300px + padding (cerca de 310px) */
             height: 320px; 
             overflow: hidden; 
+        }
+        /* O carrossel-lista-imagens é escondido pelo JavaScript */
+        .carrossel-lista-imagens {
+            display: none;
         }
         
         .carrossel-bloco {
@@ -163,7 +166,6 @@
         }
         
         .carrossel-bloco img {
-            /* TAMANHO AJUSTADO PARA 300px */
             max-width: 300px; 
             height: 300px; 
             object-fit: cover; 
@@ -172,6 +174,58 @@
             border-radius: 4px;
             box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
         }
+
+        /* --- Estilos da Seção Blog (NOVO) --- */
+        .blog-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .blog-item {
+            flex: 1; 
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            transition: box-shadow 0.3s;
+            text-align: left;
+        }
+
+        .blog-item:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-item h3 {
+            color: var(--cor-primaria);
+            font-size: 1.1em;
+            margin-top: 0;
+            line-height: 1.4;
+        }
+
+        .blog-item p {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .blog-item a.ler-mais {
+            color: var(--cor-destaque);
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .blog-item img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
 
         /* Rodapé */
         footer {
@@ -182,10 +236,10 @@
             margin-top: 0;
         }
 
-        /* Responsividade (Para visualização em Celular) */
+        /* Responsividade */
         @media (max-width: 768px) {
             .carrossel-3x1 {
-                height: 100px; /* Mantemos pequeno no celular */
+                height: 100px;
             }
             .carrossel-bloco img {
                  max-width: 80px; 
@@ -198,6 +252,13 @@
             nav a { display: block; margin: 5px 0; padding: 10px 0; }
             .container { width: 95%; }
             .logo { max-width: 200px; }
+            /* Responsividade do Blog para Celular: Itens empilhados */
+            .blog-grid {
+                flex-direction: column;
+            }
+            .blog-item img {
+                max-height: 250px;
+            }
         }
     </style>
 
@@ -218,6 +279,7 @@
             <a href="#aviamentos">Aviamentos</a>
             <a href="#tinturaria">Tinturaria</a>
             <a href="#fios">Cremer Erzkontor</a>
+            <a href="#blog">Blog</a> 
             <a href="#contato">Contato</a>
         </nav>
     </header>
@@ -236,15 +298,16 @@
             <h2>Círculo | Aviamentos Industriais: Linhas e Zíperes</h2>
             
             <div class="carrossel-3x1" id="carrossel-circulo">
-                <div class="carrossel-bloco ativo">
+                <div class="carrossel-lista-imagens">
+                    <img src="imagens/circulo_linha_120_2.png" alt="Linha 120 Círculo"> 
                     <img src="imagens/circulo_fitas_1.png" alt="Fitas Círculo"> 
                     <img src="imagens/circulo_linha_overlock_1.png" alt="Linha Overlock Círculo"> 
                     <img src="imagens/circulo_linha120_1.png" alt="Linha 120 Círculo"> 
-                </div>
-                <div class="carrossel-bloco">
                     <img src="imagens/circulo_ziper_1.png" alt="Zíper Círculo"> 
                     <img src="imagens/circulo_fitas_1.png" alt="Fitas Círculo"> 
-                    <img src="imagens/circulo_linha_overlock_1.png" alt="Linha Overlock Círculo"> 
+                    <img src="imagens/circulo_linha_overlock_1.png" alt="Linha Overlock Círculo">
+                    <img src="imagens/circulo_colas.png" alt="Colas Círculo">
+                    <img src="imagens/circulo_tesoura.png" alt="Tesouras Círculo"> 
                 </div>
             </div>
 
@@ -260,12 +323,10 @@
             <h2>GS Tinturaria | Serviços Especializados em Tingimento de Malha</h2>
             
              <div class="carrossel-3x1" id="carrossel-gs">
-                <div class="carrossel-bloco ativo">
+                <div class="carrossel-lista-imagens">
                     <img src="imagens/gs_acabamento_1.png" alt="Serviço de Acabamento GS"> 
                     <img src="imagens/gs_acabamento_2.png" alt="Detalhe de Acabamento GS"> 
                     <img src="imagens/gs_acabamento_3.png" alt="Visualização de Acabamento GS"> 
-                </div>
-                <div class="carrossel-bloco">
                     <img src="imagens/gs_maquinas_1.png" alt="Máquinas de Tingimento"> 
                     <img src="imagens/gs_rama_1.png" alt="Máquina de Rama"> 
                     <img src="imagens/gs_acabamento_1.png" alt="Serviço de Acabamento GS"> 
@@ -280,12 +341,10 @@
             <h2>Cremer Erzkontor | Fios Têxteis de Poliamida (Nylon)</h2>
             
             <div class="carrossel-3x1" id="carrossel-cremer">
-                <div class="carrossel-bloco ativo">
-                    <img src="imagens/cremer_homem_1.png" alt="Fios Cremer (Modelo Masculino)"> 
+                <div class="carrossel-lista-imagens">
+                    <img src="imagens/cremer_homem_1.png" alt="Fios Cremer (Modelo Masculino)">                     
+                    <img src="imagens/cremer_pecas_1.png" alt="Peças Têxteis Cremer">
                     <img src="imagens/cremer_mulher_1.png" alt="Fios Cremer (Modelo Feminino)"> 
-                    <img src="imagens/cremer_pecas_1.png" alt="Peças Têxteis Cremer"> 
-                </div>
-                <div class="carrossel-bloco">
                     <img src="imagens/cremer_pecas_2.png" alt="Detalhe de Peça Têxtil Cremer"> 
                     <img src="imagens/cremer_pecas_3.png" alt="Conjunto de Peças Cremer"> 
                     <img src="imagens/cremer_homem_1.png" alt="Fios Cremer (Modelo Masculino)"> 
@@ -299,6 +358,66 @@
                 <li>Entre em contato para especificações técnicas, cotações de volume e prazos de entrega.</li>
             </ul>
         </section>
+        
+        <section id="blog" class="container">
+    <h2>MPG Tech | Blog de Notícias e Tendências</h2>
+    <div style="width: 100%; border-bottom: 3px solid var(--cor-destaque); margin-bottom: 25px;"></div>
+    
+    <p>Seja bem-vindo ao nosso espaço de conteúdo. Aqui você encontra análises de mercado, dicas de produção e novidades sobre insumos e serviços.</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px;">
+        
+        <div style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
+            <a href="artigos/apagao-costureiras.html" style="text-decoration: none; color: inherit;">
+                <img src="imagens/apagao_costureiras.jpg" alt="Miniatura do Post Apagão de Costureiras" style="width: 100%; height: 180px; object-fit: cover;">
+                <div style="padding: 15px;">
+                    <h3 style="color: var(--cor-primaria); margin-top: 0; font-size: 1.2em;">🚨 O APAGÃO DE COSTUREIRAS NO BRASIL</h3>
+                    <p style="font-size: 0.85em; color: #666; margin-bottom: 10px;">Postado em 12/Out/2025</p>
+                    <p style="font-size: 0.95em;">Enquanto a indústria têxtil cresce, o setor enfrenta uma queda brutal de 32% no pessoal de confecção...</p>
+                    <span style="color: var(--cor-destaque); font-weight: bold; font-size: 0.9em; display: block; margin-top: 10px;">
+                        Continuar Lendo →
+                    </span>
+                </div>
+            </a>
+        </div>
+
+        <div style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
+            <a href="artigos/tingimento-natural.html" style="text-decoration: none; color: inherit;">
+                <img src="imagens/tingiemtno_natural.jpg" alt="Miniatura do Post Tingimento Natural" style="width: 100%; height: 180px; object-fit: cover;">
+                <div style="padding: 15px;">
+                    <h3 style="color: var(--cor-primaria); margin-top: 0; font-size: 1.2em;">Tingimento Natural: Sustentabilidade na Moda</h3>
+                    <p style="font-size: 0.85em; color: #666; margin-bottom: 10px;">Postado em 12/Out/2025</p>
+                    <p style="font-size: 0.95em;">A técnica ancestral com corantes de folhas e flores alia inovação e sustentabilidade...</p>
+                    <span style="color: var(--cor-destaque); font-weight: bold; font-size: 0.9em; display: block; margin-top: 10px;">
+                        Continuar Lendo →
+                    </span>
+                </div>
+            </a>
+        </div>
+
+        <div style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s;">
+            <a href="artigos/ia-no-tingimento.html" style="text-decoration: none; color: inherit;">
+                <img src="imagens/ia_tingimento.jpg" alt="Miniatura do Post IA no Tingimento" style="width: 100%; height: 180px; object-fit: cover;">
+                <div style="padding: 15px;">
+                    <h3 style="color: var(--cor-primaria); margin-top: 0; font-size: 1.2em;">IA e a Qualidade nos Processos de Tingimento</h3>
+                    <p style="font-size: 0.85em; color: #666; margin-bottom: 10px;">Postado em 12/Out/2025</p>
+                    <p style="font-size: 0.95em;">Um novo estudo mostra que a aprendizagem de máquina (ML) pode prever com mais exatidão como as cores de tecidos se alteram...</p>
+                    <span style="color: var(--cor-destaque); font-weight: bold; font-size: 0.9em; display: block; margin-top: 10px;">
+                        Continuar Lendo →
+                    </span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+    
+    <p style="text-align: center; margin-top: 30px;">
+        <a href="blog-todos.html" style="font-weight: bold; color: var(--cor-primaria); text-decoration: underline;">
+            Ver todos os artigos publicados →
+        </a>
+    </p>
+</section>
+
 
         <section id="contato">
             <h2>Entre em Contato Agora</h2>
@@ -311,24 +430,50 @@
             </p>
         </section>
 
-    </div>
-
-    <footer>
+    </div> <footer>
         <p>&copy; 2025 Mauricio Josefowicz - Representação Comercial.</p>
     </footer>
 
     <script>
-        function iniciarCarrossel(idCarrossel, intervalo) {
+        function iniciarCarrosselDinamico(idCarrossel, intervalo) {
             const carrossel = document.getElementById(idCarrossel);
             if (!carrossel) return;
 
-            const blocos = carrossel.querySelectorAll('.carrossel-bloco');
+            // 1. Encontra a lista de imagens
+            const listaImagens = carrossel.querySelector('.carrossel-lista-imagens');
+            if (!listaImagens) return;
+
+            const imagens = Array.from(listaImagens.querySelectorAll('img'));
+            const blocos = [];
+            const numImagens = imagens.length;
+            
+            // 2. Cria os blocos dinamicamente (grupos de 3 imagens)
+            for (let i = 0; i < numImagens; i += 3) {
+                const bloco = document.createElement('div');
+                bloco.classList.add('carrossel-bloco');
+                
+                // Adiciona as 3 imagens ao novo bloco
+                for (let j = 0; j < 3; j++) {
+                    if (imagens[i + j]) {
+                        // Clona a imagem para o novo bloco
+                        bloco.appendChild(imagens[i + j].cloneNode(true)); 
+                    }
+                }
+                blocos.push(bloco);
+                carrossel.appendChild(bloco); // Adiciona o bloco ao carrossel
+            }
+
+            // 3. Remove a lista original
+            listaImagens.remove();
+
             let indiceAtual = 0;
 
             function mostrarBloco(indice) {
+                // Esconde todos os blocos
                 for (let i = 0; i < blocos.length; i++) {
                     blocos[i].classList.remove('ativo');
                 }
+                // Mostra o bloco desejado
                 if (blocos[indice]) {
                     blocos[indice].classList.add('ativo');
                 }
@@ -337,19 +482,26 @@
             function proximoBloco() {
                 indiceAtual++;
                 if (indiceAtual >= blocos.length) {
-                    indiceAtual = 0; 
+                    indiceAtual = 0; // Volta para o início
                 }
                 mostrarBloco(indiceAtual);
             }
 
+            // Inicia
             mostrarBloco(indiceAtual);
 
-            setInterval(proximoBloco, intervalo);
+            // Inicia o intervalo de troca automática
+            if (blocos.length > 1) { // Só inicia se houver mais de um bloco para rodar
+                setInterval(proximoBloco, intervalo);
+            }
         }
 
-        iniciarCarrossel('carrossel-circulo', 5000);
-        iniciarCarrossel('carrossel-gs', 5000);
-        iniciarCarrossel('carrossel-cremer', 5000); 
+        // Chamadas para iniciar os carrosséis
+        document.addEventListener('DOMContentLoaded', () => {
+            iniciarCarrosselDinamico('carrossel-circulo', 5000);
+            iniciarCarrosselDinamico('carrossel-gs', 5000);
+            iniciarCarrosselDinamico('carrossel-cremer', 5000);
+        });
     </script>
 
 </body>
