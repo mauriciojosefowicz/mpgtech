@@ -272,12 +272,54 @@
       if (blocos.length > 1) setInterval(proximo, intervalo);
     }
 
-    // Aguarda carregamento TOTAL da página (imagens incluídas)
-    window.addEventListener('load', () => {
-      iniciarCarrossel('carrossel-circulo', 5000);
-      iniciarCarrossel('carrossel-gs', 5000);
-      iniciarCarrossel('carrossel-cremer', 5000);
-    });
-  </script>
+    <script type="module">
+  /* --- Script do Carrossel 3×1 com repetição --- */
+  function iniciarCarrossel(idCarrossel, intervalo) {
+    const carrossel = document.getElementById(idCarrossel);
+    if (!carrossel) return;
+
+    const lista = carrossel.querySelector('.carrossel-lista-imagens');
+    if (!lista) return;
+
+    const imagens = Array.from(lista.querySelectorAll('img'));
+    const blocos = [];
+    const num = imagens.length;
+
+    for (let i = 0; i < num; i += 3) {
+      const bloco = document.createElement('div');
+      bloco.classList.add('carrossel-bloco');
+      for (let j = 0; j < 3; j++) {
+        const img = imagens[(i + j) % num];
+        bloco.append(img.cloneNode(true));
+      }
+      blocos.push(bloco);
+      carrossel.append(bloco);
+    }
+
+    lista.remove();
+    let indice = 0;
+
+    function mostrar(i) {
+      blocos.forEach(b => b.classList.remove('ativo'));
+      if (blocos[i]) blocos[i].classList.add('ativo');
+    }
+
+    function proximo() {
+      indice = (indice + 1) % blocos.length;
+      mostrar(indice);
+    }
+
+    mostrar(indice);
+    if (blocos.length > 1) setInterval(proximo, intervalo);
+  }
+
+  // Executa quando DOM está pronto (mais confiável em celulares)
+  document.addEventListener('DOMContentLoaded', () => {
+    iniciarCarrossel('carrossel-circulo', 5000);
+    iniciarCarrossel('carrossel-gs', 5000);
+    iniciarCarrossel('carrossel-cremer', 5000);
+  });
+</script>
 </body>
 </html>
+
