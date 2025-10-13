@@ -327,7 +327,7 @@
       const blocos = [];
       const num = imagens.length;
 
-      // Cria blocos de 3 imagens, repetindo do início se faltar
+           // Cria blocos de 3 imagens, repetindo do início se faltar
       for (let i = 0; i < num; i += 3) {
         const bloco = document.createElement('div');
         bloco.classList.add('carrossel-bloco');
@@ -339,6 +339,7 @@
         carrossel.append(bloco);
       }
 
+      // Remove o container original das imagens (não mais necessário)
       lista.remove();
       let indice = 0;
 
@@ -352,11 +353,14 @@
         mostrar(indice);
       }
 
+      // Exibe o primeiro bloco de imagens
       mostrar(indice);
       if (blocos.length > 1) setInterval(proximo, intervalo);
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
+    /* Aguarda carregamento TOTAL da página (imagens incluídas)
+       antes de iniciar os carrosséis — corrige falha no mobile */
+    window.addEventListener('load', () => {
       iniciarCarrossel('carrossel-circulo', 5000);
       iniciarCarrossel('carrossel-gs', 5000);
       iniciarCarrossel('carrossel-cremer', 5000);
