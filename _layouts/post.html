@@ -4,10 +4,16 @@ layout: default
 
 <article class="container">
   <h1>{{ page.title }}</h1>
-  <p style="color:#666; font-size:0.9em;">{{ page.date | date: "%d de %b de %Y" }}</p>
+  <p style="color:#666; font-size:0.9em;">
+    {{ page.date | date: "%d de %b de %Y" }}
+  </p>
 
   {% if page.image %}
-    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" style="width:100%; max-width:900px; margin:20px 0;">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" 
+         style="width:100%; max-width:900px; margin:20px 0;">
+  {% elsif post.image %}
+    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" 
+         style="width:100%; max-width:900px; margin:20px 0;">
   {% endif %}
 
   <div class="post-content">
