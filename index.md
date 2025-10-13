@@ -3,56 +3,67 @@ layout: default
 title: "MPG Tech | Soluções Têxteis"
 ---
 
-<section id="proposta">
-  <h2>Sua Conexão Estratégica no Setor Têxtil</h2>
-  <p>Com foco em eficiência, qualidade e atendimento consultivo, sou o elo entre sua confecção e três das maiores referências do mercado nacional. Minha missão é entender as demandas da sua produção, seja em pequeno, médio ou grande porte, e fornecer as melhores soluções em insumos e serviços.</p>
-  <p>Otimize sua cadeia de suprimentos contando com a excelência em fios, aviamentos e tinturaria.</p>
-</section>
+<main class="container">
 
-<section id="aviamentos">
-  <h2>Círculo | Aviamentos Industriais – Linhas e Zíperes</h2>
-  <img src="{{ site.baseurl }}/imagens/circulo_linha_120_2.png" alt="Linha 120 Círculo" style="max-width:300px;">
-  <p>Representando a linha completa de insumos essenciais para a sua confecção: linhas de costura reta e overlock, zíperes, colas, tesouras e outros aviamentos.</p>
-</section>
+  <section id="proposta">
+    <h2>Sua Conexão Estratégica no Setor Têxtil</h2>
+    <div class="destaque">
+      <p>Com foco em eficiência, qualidade e atendimento consultivo, sou o elo entre sua confecção e três das maiores referências do mercado nacional. Minha missão é entender as demandas da sua produção, seja em pequeno, médio ou grande porte, e fornecer as melhores soluções em insumos e serviços.</p>
+      <p>Otimize sua cadeia de suprimentos contando com a excelência em fios, aviamentos e tinturaria.</p>
+    </div>
+  </section>
 
-<section id="tinturaria">
-  <h2>GS Tinturaria | Serviços de Tingimento de Malha</h2>
-  <img src="{{ site.baseurl }}/imagens/gs_acabamento_1.png" alt="Acabamento GS" style="max-width:300px;">
-  <p>Parceira ideal para o serviço de valor agregado que sua malha exige. Qualidade, uniformidade de cor e pontualidade são nossos diferenciais.</p>
-</section>
-
-<section id="fios">
-  <h2>Fios Têxteis de Alta Performance</h2>
-  <img src="{{ site.baseurl }}/imagens/cremer_homem_1.png" alt="Fios Cremer" style="max-width:300px;">
-  <p>Os fios de poliamida distribuídos pela Cremer Erzkontor representam tecnologia e performance no desenvolvimento de tecidos. Ideais para produtos que exigem toque macio, resistência e excelência em malharia e tecelagem.</p>
-</section>
-
-<section id="blog">
-  <h2>Blog | Novidades do Setor</h2>
-  <div class="blog-container">
-    {% for post in site.posts limit:3 %}
-      <div class="blog-card">
-        {% if post.image %}
-          <img src="{{ post.image }}" alt="{{ post.title }}" class="thumb-blog" />
-        {% endif %}
-        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-        <p class="data-post">{{ post.date | date: "%d de %B de %Y" }}</p>
-        <p>{{ post.excerpt }}</p>
-        <a class="leia-mais" href="{{ post.url | relative_url }}">Ler mais →</a>
+  <section id="aviamentos" class="empresa-circulo">
+    <h2>Círculo | Aviamentos Industriais: Linhas e Zíperes</h2>
+    <div class="carrossel-3x1" id="carrossel-circulo">
+      <div class="carrossel-lista-imagens">
+        <img src="{{ site.baseurl }}/imagens/circulo_linha_120_2.png" alt="Linha 120 Círculo">
+        <img src="{{ site.baseurl }}/imagens/circulo_fitas_1.png" alt="Fitas Círculo">
+        <img src="{{ site.baseurl }}/imagens/circulo_linha_overlock_1.png" alt="Linha Overlock Círculo">
+        <img src="{{ site.baseurl }}/imagens/circulo_ziper_1.png" alt="Zíper Círculo">
+        <img src="{{ site.baseurl }}/imagens/circulo_colas.png" alt="Colas Círculo">
+        <img src="{{ site.baseurl }}/imagens/circulo_tesoura.png" alt="Tesouras Círculo">
       </div>
-    {% endfor %}
-  </div>
-  <p style="text-align:center; margin-top:20px;">
-    <a href="{{ '/blog/' | relative_url }}">Ver todos os posts</a>
-  </p>
-</section>
+    </div>
 
-<section id="contato">
-  <h2>Entre em Contato</h2>
-  <p>
-    <strong>Mauricio Josefowicz</strong><br>
-    Telefone / WhatsApp: <a href="https://wa.me/5547999977900" target="_blank">(47) 99997‑7900</a><br>
-    E‑mail: <a href="mailto:mauricio.mpgtech@gmail.com">mauricio.mpgtech@gmail.com</a><br>
-    Instagram: <a href="https://www.instagram.com/mpgtech" target="_blank">@mpgtech</a>
-  </p>
-</section>
+    <p>Representando a linha completa de insumos essenciais para a sua confecção. Fornecimento direto e consultoria para especificação correta de produtos, garantindo performance e durabilidade em todas as etapas de costura e acabamento.</p>
+    <ul>
+      <li>Linhas de costura, reta e overlock, de alta resistência, para máquinas de alto desempenho.</li>
+      <li>Zíperes para diversos segmentos e aplicações | fixo | destacável | invisível | metal | tratorado.</li>
+      <li>Ampla variedade de aviamentos e acessórios, como tesouras, colas, fitas e muito mais.</li>
+    </ul>
+  </section>
+
+  <section id="tinturaria" class="empresa-gs">
+    <h2>GS Tinturaria | Serviços Especializados em Tingimento de Malha</h2>
+    <div class="carrossel-3x1" id="carrossel-gs">
+      <div class="carrossel-lista-imagens">
+        <img src="{{ site.baseurl }}/imagens/gs_acabamento_1.png" alt="Serviço de Acabamento GS">
+        <img src="{{ site.baseurl }}/imagens/gs_acabamento_2.png" alt="Detalhe de Acabamento GS">
+        <img src="{{ site.baseurl }}/imagens/gs_acabamento_3.png" alt="Visualização de Acabamento GS">
+        <img src="{{ site.baseurl }}/imagens/gs_maquinas_1.png" alt="Máquinas de Tingimento">
+        <img src="{{ site.baseurl }}/imagens/gs_rama_1.png" alt="Máquina de Rama">
+      </div>
+    </div>
+
+    <p>O parceiro ideal para o serviço de valor agregado que sua malha exige.</p>
+    <p>A GS Tinturaria oferece qualidade, uniformidade de cor e pontualidade, elementos cruciais para a gestão de produção de empresas de todos os portes.</p>
+    <p>Foco na excelência do processo para garantir que sua malha atinja o padrão de cor e toque desejado.</p>
+
+    <h3 style="color: var(--cor-primaria); margin-top: 20px;">Serviços em Destaque:</h3>
+    <ul style="list-style-type: none; padding-left: 0;">
+      <li>✅ Tingimento de malhas com algodão, poliéster, viscose e poliamida</li>
+      <li>✅ Acabamentos em aberto / rama e tubular / calandra</li>
+      <li>✅ Felpadeiras (para tecidos com toque aveludado)</li>
+    </ul>
+  </section>
+
+  <section id="fios" class="empresa-cremer">
+    <h2>Fios Têxteis de Poliamida (Nylon)</h2>
+    <div class="carrossel-3x1" id="carrossel-cremer">
+      <div class="carrossel-lista-imagens">
+        <img src="{{ site.baseurl }}/imagens/cremer_homem_1.png" alt="Fios Cremer (Modelo Masculino)">
+        <img src="{{ site.baseurl }}/imagens/cremer_pecas_1.png" alt="Peças Têxteis Cremer">
+        <img src="{{ site.baseurl }}/imagens/cremer_mulher_1.png" alt="Fios Cremer (Modelo Feminino)">
+        <img src="{{ site.baseurl }}/imagens/cremer_pecas_2.png" alt="Detalhe de Peça Têxtil Cremer">
+        <img src="{{ site.baseurl }}/imagens/cremer_pecas_3.png" alt
