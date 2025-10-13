@@ -6,7 +6,7 @@ image: '{{ site.baseurl }}/imagens/posts/analise-mercado-moda-2026.jpg'
 excerpt: "O que o consumidor espera da moda nacional em 2026"
 ---
 
-# Análise do Mercado de Moda 2025‑2026
+
 
 ## 📊 Visão Geral do Setor
 A análise do mercado da moda para os anos de 2025 e 2026 revela dados atualizados sobre o desempenho do setor e as tendências que moldarão os lançamentos futuros.  
@@ -35,5 +35,6 @@ A análise das tendências e do comportamento do consumidor é fundamental para 
 
 
 🔗 [Link – reportagem completa](https://revistatextil.com.br/audaces-analise-de-mercado-de-moda-2025-2026/)
+
 
 
