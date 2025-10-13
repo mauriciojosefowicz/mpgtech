@@ -88,15 +88,16 @@ title: "MPG Tech | Soluções Têxteis"
 
   <!-- Contato -->
   <section id="contato">
-    <h2>Entre em Contato Agora</h2>
-    <p>Sua produção não pode parar. Fale comigo:</p>
-    <p>
-      <strong>Mauricio Josefowicz</strong><br>
-      Telefone / WhatsApp: <a href="https://wa.me/5547999977900" target="_blank">(47) 99997‑7900</a><br>
-      E‑mail: <a href="mailto:mauricio.mpgtech@gmail.com">mauricio.mpgtech@gmail.com</a><br>
-      Instagram: <a href="https://www.instagram.com/mpgtech" target="_blank">@mpgtech</a>
-    </p>
-  </section>
+  <h2>Entre em Contato Agora</h2>
+  <p><strong>Sua produção não pode parar!</strong> Estou pronto para atender suas necessidades e garantir o melhor custo‑benefício em insumos e serviços. Fale comigo:</p>
+
+  <p>
+    <strong>Mauricio Josefowicz</strong><br>
+    <strong>Telefone / WhatsApp:</strong> <a href="https://wa.me/5547999977900" target="_blank"><strong>(47) 99997‑7900</strong></a><br>
+    <strong>E‑mail:</strong> <a href="mailto:mauricio.mpgtech@gmail.com"><strong>mauricio.mpgtech@gmail.com</strong></a><br>
+    <strong>Instagram:</strong> <a href="https://www.instagram.com/mpgtech" target="_blank"><strong>@mpgtech</strong></a>
+  </p>
+</section>
 
 </main>
 
