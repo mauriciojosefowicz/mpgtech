@@ -9,10 +9,10 @@ layout: default
   </p>
 
   {% if page.image %}
-    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" 
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}"
          style="width:100%; max-width:900px; margin:20px 0;">
   {% elsif post.image %}
-    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" 
+    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}"
          style="width:100%; max-width:900px; margin:20px 0;">
   {% endif %}
 
