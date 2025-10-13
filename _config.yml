@@ -36,4 +36,4 @@ exclude:
   - README.md
   - LICENSE
 
-force_rebuild: 4
+force_rebuild: 6
