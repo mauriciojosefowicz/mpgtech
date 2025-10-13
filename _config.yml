@@ -35,3 +35,5 @@ exclude:
   - vendor/
   - README.md
   - LICENSE
+
+force_rebuild: 3
