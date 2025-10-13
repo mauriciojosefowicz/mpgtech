@@ -45,7 +45,7 @@ title: "MPG Tech | Soluções Têxteis"
 
   <!-- Fios -->
   <section id="fios" class="empresa-cremer">
-    <h2>Fios Têxteis de Poliamida (Nylon)</h2>
+    <h2>Cremer Erzkontor | Fios Têxteis de Poliamida (Nylon)</h2>
     <div class="carrossel-3x1" id="carrossel-cremer">
       <div class="carrossel-lista-imagens">
         <img src="{{ site.baseurl }}/imagens/cremer_homem_1.png" alt="">
