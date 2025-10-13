@@ -2,7 +2,7 @@
 layout: post
 title: "Análise do Mercado da Moda 2025-2026"
 date: 2025-10-13
-image: '{{ site.baseurl }}/imagens/posts/analise-moda-2026.jpeg'
+image: '{{ site.baseurl }}/imagens/posts/analise-moda-2026.jpg'
 excerpt: "O que o consumidor espera da moda nacional em 2026"
 ---
 
@@ -35,3 +35,4 @@ A análise das tendências e do comportamento do consumidor é fundamental para 
 
 
 🔗 [Link – reportagem completa](https://revistatextil.com.br/audaces-analise-de-mercado-de-moda-2025-2026/)
+
