@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Inovações em Fios Reciclados"
+date: 2025-02-18
+image: /imagens/posts/fios-reciclados.jpg
+excerpt: "Novas tecnologias reduzem em 40% o consumo de água nos processos de fiação reciclada."
+---
+
+O setor têxtil investe cada vez mais em sustentabilidade.  
+Fios produzidos com material reciclado e processos de tingimento  
+de baixo impacto ganham espaço entre grandes marcas brasileiras.
+
+<!--break-->
+
+Os novos modelos permitem rastreabilidade total e composição híbrida de fibras,  
+mantendo desempenho e qualidade comparável a fios virgens.

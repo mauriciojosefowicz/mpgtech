@@ -1,0 +1,24 @@
+---
+layout: default
+title: "Blog | MPG Tech"
+permalink: /blog/
+---
+
+<section id="blog-lista">
+  <h2>Todos os Posts</h2>
+
+  <div class="blog-container">
+  {% for post in site.posts %}
+    <div class="blog-card">
+      {% if post.image %}
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="thumb-blog">
+      {% endif %}
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="data-post">{{ post.date | date: "%d de %b de %Y" }}</p>
+      <p>{{ post.excerpt | strip_html | truncate: 220 }}</p>
+      <a class="leia-mais" href="{{ post.url | relative_url }}">Ler mais →</a>
+    </div>
+  {% endfor %}
+</div>
+  </div>
+</section>
