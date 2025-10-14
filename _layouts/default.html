@@ -169,11 +169,12 @@
 
     @media (max-width:768px){
 
-  /* container se ajusta ao bloco ativo */
+  /* container mede pela imagem, sem espaço forçado */
   .carrossel-3x1{
     position:relative;
     overflow:hidden;
-    height:auto !important;  /* anula o 320px herdado */
+    height:auto !important;
+    min-height:0 !important;    /* <── anula o 320 px do desktop */
     margin-bottom:0;
   }
 
@@ -196,11 +197,11 @@
     opacity:1;
   }
 
-  /* imagens: altura fixa, corte lateral proporcional */
+  /* imagens: altura fixa (quadradas) com corte lateral */
   .carrossel-bloco img{
-    height:100px;        /* altura igual em todas */
-    width:auto;          /* largura calculada conforme proporção */
-    object-fit:cover;    /* corta laterais mantendo proporção */
+    height:100px;      /* altura fixa */
+    width:100px;       /* quadrado */
+    object-fit:cover;  /* corta laterais */
     border-radius:6px;
   }
 }
@@ -270,6 +271,7 @@
   </script>
 </body>
 </html>
+
 
 
 
