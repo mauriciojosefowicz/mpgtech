@@ -172,19 +172,26 @@
     height:auto;
     overflow:visible;
     margin-bottom:10px;
+    position:relative;
   }
   .carrossel-bloco{
-    position:static;     /* ← faz parte do fluxo normal */
     flex-wrap:nowrap;
     justify-content:center;
     align-items:center;
     gap:8px;
-    opacity:1;           /* ← garante visível */
+    width:100%;
+    position:absolute;   /* ← mantém carrossel “um por vez” */
+    top:0;
+    left:0;
   }
   .carrossel-bloco img{
     width:32%;
     height:auto;
     max-width:none;
+  }
+  .carrossel-bloco.ativo{
+    position:relative;   /* ← só o ativo entra no fluxo normal */
+    opacity:1;
   }
 }
   </style>
@@ -253,6 +260,7 @@
   </script>
 </body>
 </html>
+
 
 
 
