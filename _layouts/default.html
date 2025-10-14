@@ -231,13 +231,14 @@
       mostrar(ind);
       if(blocos.length>1) setInterval(prox,intervalo);
     }
-    document.addEventListener('DOMContentLoaded',()=>{
-      iniciarCarrossel('carrossel-circulo',5000);
-      iniciarCarrossel('carrossel-gs',5000);
-      iniciarCarrossel('carrossel-cremer',5000);
-    });
+    window.addEventListener('load', ()=>{
+  iniciarCarrossel('carrossel-circulo',5000);
+  iniciarCarrossel('carrossel-gs',5000);
+  iniciarCarrossel('carrossel-cremer',5000);
+});
   </script>
 </body>
 </html>
+
 
 
