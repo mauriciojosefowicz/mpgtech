@@ -169,20 +169,22 @@
 
     @media (max-width:768px){
   .carrossel-3x1{
-    height:auto;
+    height:auto;             /* remove altura fixa */
+    overflow:visible;         /* garante que nada seja cortado */
+    margin-bottom:10px;       /* reduz o espaço após o carrossel */
   }
   .carrossel-bloco{
     flex-wrap:nowrap;
     justify-content:center;
     align-items:center;
+    gap:8px;                  /* diminui o espaçamento entre imagens */
   }
   .carrossel-bloco img{
-    width:30%;
+    width:32%;                /* 3 imagens = 32% + gaps */
     height:auto;
-    max-width:110px;   /* ajuste conforme desejar */
+    max-width:none;           /* permite encolher conforme viewport */
   }
 }
-    }
   </style>
 </head>
 
@@ -249,6 +251,7 @@
   </script>
 </body>
 </html>
+
 
 
 
