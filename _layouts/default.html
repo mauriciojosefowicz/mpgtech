@@ -168,10 +168,20 @@
     .leia-mais:hover { text-decoration: underline; }
 
     @media (max-width:768px){
-      .carrossel-3x1{height:auto;}
-      .carrossel-bloco{flex-direction:column;align-items:center;}
-      .carrossel-bloco img{width:80%;height:auto;max-width:300px;}
-      nav a{display:block;margin:6px 0;}
+  .carrossel-3x1{
+    height:auto;
+  }
+  .carrossel-bloco{
+    flex-wrap:nowrap;
+    justify-content:center;
+    align-items:center;
+  }
+  .carrossel-bloco img{
+    width:30%;
+    height:auto;
+    max-width:110px;   /* ajuste conforme desejar */
+  }
+}
     }
   </style>
 </head>
@@ -239,6 +249,7 @@
   </script>
 </body>
 </html>
+
 
 
 
