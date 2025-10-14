@@ -174,7 +174,7 @@
     position:relative;
     overflow:hidden;
     height:auto !important;
-    min-height:0 !important;    /* <── anula o 320 px do desktop */
+    min-height:0 !important;    /* anula o 320 px do desktop */
     margin-bottom:0;
   }
 
@@ -183,7 +183,9 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:6px;
+    gap:8px;                   /* distância entre as imagens */
+    padding:0 8px;             /* espaçamento lateral interno */
+    box-sizing:border-box;     /* inclui padding na largura */
     position:absolute;
     top:0;
     left:0;
@@ -197,12 +199,14 @@
     opacity:1;
   }
 
-  /* imagens: altura fixa (quadradas) com corte lateral */
+  /* imagens: mesmas alturas, corte lateral e respiro nas bordas */
   .carrossel-bloco img{
-    height:100px;      /* altura fixa */
-    width:100px;       /* quadrado */
-    object-fit:cover;  /* corta laterais */
+    height:100px;                       /* altura fixa */
+    width:calc((100% - (8px * 2) - (8px * 2)) / 3); 
+    /* ^ largura calculada: 100% - paddings/gaps dividido por 3 */
+    object-fit:cover;                   /* corta apenas o excesso lateral */
     border-radius:6px;
+    flex-shrink:0;
   }
 }
   </style>
@@ -271,6 +275,7 @@
   </script>
 </body>
 </html>
+
 
 
 
