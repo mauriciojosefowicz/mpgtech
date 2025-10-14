@@ -168,14 +168,14 @@
     .leia-mais:hover { text-decoration: underline; }
 
     @media (max-width:768px){
-  /* container: sem altura fixa; ajusta pela imagem ativa */
+
   .carrossel-3x1{
     position:relative;
     overflow:hidden;
-    margin-bottom:10px;
+    height:auto !important; /* container se ajusta à imagem */
+    margin-bottom:0;
   }
 
-  /* bloco base: empilhados no mesmo lugar */
   .carrossel-bloco{
     display:flex;
     justify-content:center;
@@ -186,20 +186,19 @@
     left:0;
     width:100%;
     opacity:0;
-    transition:opacity .6s ease-in-out;
+    transition:opacity 0.6s ease-in-out;
   }
 
-  /* bloco ativo entra no fluxo e define altura */
   .carrossel-bloco.ativo{
     position:relative;
     opacity:1;
   }
 
-  /* imagens: três lado a lado, sem corte */
+  /* imagens quadradas, com altura fixa e corte nas laterais */
   .carrossel-bloco img{
-    width:31%;
-    height:auto;
-    object-fit:contain;
+    height:100px;        /* altura fixa */
+    width:100px;         /* mesmo valor = 1x1 */
+    object-fit:cover;    /* cobre a área, cortando as laterais se precisar */
     border-radius:6px;
   }
 }
@@ -269,6 +268,7 @@
   </script>
 </body>
 </html>
+
 
 
 
