@@ -168,35 +168,38 @@
     .leia-mais:hover { text-decoration: underline; }
 
     @media (max-width:768px){
+  /* container: sem altura fixa; ajusta pela imagem ativa */
   .carrossel-3x1{
     position:relative;
     overflow:hidden;
-    height:auto;
     margin-bottom:10px;
   }
 
+  /* bloco base: empilhados no mesmo lugar */
   .carrossel-bloco{
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:6px;
+    gap:8px;
     position:absolute;
-    inset:0;
+    top:0;
+    left:0;
+    width:100%;
     opacity:0;
     transition:opacity .6s ease-in-out;
   }
 
+  /* bloco ativo entra no fluxo e define altura */
   .carrossel-bloco.ativo{
-    opacity:1;
     position:relative;
+    opacity:1;
   }
 
+  /* imagens: três lado a lado, sem corte */
   .carrossel-bloco img{
-    width:30vw;          /* largura relativa à tela */
-    height:30vw;         /* mesma altura = quadrada */
-    max-width:110px;     /* não passa disso */
-    max-height:110px;
-    object-fit:cover;    /* mantém proporção sem distorcer */
+    width:31%;
+    height:auto;
+    object-fit:contain;
     border-radius:6px;
   }
 }
@@ -266,6 +269,7 @@
   </script>
 </body>
 </html>
+
 
 
 
