@@ -169,24 +169,26 @@
 
     @media (max-width:768px){
 
+  /* container se ajusta ao bloco ativo */
   .carrossel-3x1{
     position:relative;
     overflow:hidden;
-    height:auto !important; /* container se ajusta à imagem */
+    height:auto !important;  /* anula o 320px herdado */
     margin-bottom:0;
   }
 
+  /* blocos empilhados, só o ativo visível */
   .carrossel-bloco{
     display:flex;
     justify-content:center;
     align-items:center;
-    gap:8px;
+    gap:6px;
     position:absolute;
     top:0;
     left:0;
     width:100%;
     opacity:0;
-    transition:opacity 0.6s ease-in-out;
+    transition:opacity .6s ease-in-out;
   }
 
   .carrossel-bloco.ativo{
@@ -194,11 +196,11 @@
     opacity:1;
   }
 
-  /* imagens quadradas, com altura fixa e corte nas laterais */
+  /* imagens: altura fixa, corte lateral proporcional */
   .carrossel-bloco img{
-    height:100px;        /* altura fixa */
-    width:100px;         /* mesmo valor = 1x1 */
-    object-fit:cover;    /* cobre a área, cortando as laterais se precisar */
+    height:100px;        /* altura igual em todas */
+    width:auto;          /* largura calculada conforme proporção */
+    object-fit:cover;    /* corta laterais mantendo proporção */
     border-radius:6px;
   }
 }
@@ -268,6 +270,7 @@
   </script>
 </body>
 </html>
+
 
 
 
