@@ -169,29 +169,33 @@
 
     @media (max-width:768px){
   .carrossel-3x1{
-    height:auto;
-    overflow:visible;
-    margin-bottom:10px;
     position:relative;
+    overflow:hidden;       /* corta o que passar */
+    height:auto;           /* deixa a altura pelo conteúdo */
+    margin-bottom:10px;
   }
+
   .carrossel-bloco{
-    flex-wrap:nowrap;
+    display:flex;
     justify-content:center;
     align-items:center;
-    gap:8px;
-    width:100%;
-    position:absolute;   /* ← mantém carrossel “um por vez” */
-    top:0;
-    left:0;
+    gap:6px;               /* espaço entre imagens */
+    position:absolute;
+    inset:0;               /* top/right/bottom/left:0 */
+    opacity:0;
+    transition:opacity .6s ease-in-out;
   }
-  .carrossel-bloco img{
-    width:32%;
-    height:auto;
-    max-width:none;
-  }
+
   .carrossel-bloco.ativo{
-    position:relative;   /* ← só o ativo entra no fluxo normal */
     opacity:1;
+    position:relative;     /* o ativo define a altura */
+  }
+
+  .carrossel-bloco img{
+    width:30%;
+    aspect-ratio:1/1;      /* força proporção quadrada */
+    object-fit:cover;      /* preenche mantendo corte adequado */
+    border-radius:6px;
   }
 }
   </style>
@@ -260,6 +264,7 @@
   </script>
 </body>
 </html>
+
 
 
 
