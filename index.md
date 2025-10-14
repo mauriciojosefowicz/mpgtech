@@ -25,7 +25,12 @@ title: "MPG Tech | Soluções Têxteis"
         <img src="{{ site.baseurl }}/imagens/circulo_tesoura.png" alt="">
       </div>
     </div>
-    <p>Linhas, zíperes e aviamentos industriais fornecidos pela Círculo S/A.</p>
+    <p>Representando a linha completa de insumos essenciais para a sua confecção. Fornecimento direto e consultoria para especificação correta de produtos, garantindo performance e durabilidade em todas as etapas de costura e acabamento.</p>
+  <ul>
+    <li>Linhas de costura, reta e overlock, de alta resistência, para máquinas de alto desempenho.</li>
+    <li>Zíperes para diversos segmentos e aplicações | fixo | destacável | invisível | metal | tratorado.</li>
+    <li>Ampla variedade de aviamentos e acessórios, como tesouras, colas, fitas e muito mais.</li>
+  </ul>
   </section>
 
   <!-- Tinturaria -->
@@ -40,7 +45,16 @@ title: "MPG Tech | Soluções Têxteis"
         <img src="{{ site.baseurl }}/imagens/gs_rama_1.png" alt="">
       </div>
     </div>
-    <p>Serviços de tingimento e acabamento com qualidade e pontualidade garantidas.</p>
+    <p>O parceiro ideal para o serviço de valor agregado que sua malha exige.</p>
+  <p>A GS Tinturaria oferece qualidade, uniformidade de cor e pontualidade, elementos cruciais para a gestão de produção de empresas de todos os portes.</p>
+  <p>Foco na excelência do processo para garantir que sua malha atinja o padrão de cor e toque desejado.</p>
+
+  <h3 style="color: var(--cor-primaria); margin-top: 20px;">Serviços em Destaque:</h3>
+  <ul style="list-style-type: none; padding-left: 0;">
+    <li>✅ Tingimento de malhas com algodão, poliéster, viscose e poliamida</li>
+    <li>✅ Acabamentos em aberto / rama e tubular / calandra</li>
+    <li>✅ Felpadeiras (para tecidos com toque aveludado)</li>
+  </ul>
   </section>
 
   <!-- Fios -->
