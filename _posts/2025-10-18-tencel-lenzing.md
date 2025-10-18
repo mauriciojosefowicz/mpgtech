@@ -6,7 +6,7 @@ image: "/imagens/posts/tencel_lenzing.jpg"
 excerpt: "O que o consumidor espera da moda nacional em 2026."
 ---
 
-## Lançamento da Nova Fibra TENCEL™ Liocel HV100 pela Lenzing
+## Lançamento: Nova Fibra TENCEL™ Liocel HV100 Lenzing
 
 ### Inovação no Mercado Têxtil 🌱
 
@@ -40,5 +40,6 @@ Sua capacidade de se misturar com outras fibras, como o **algodão**, permite va
 A Lenzing continua expandindo as possibilidades de **design responsável**, promovendo a sustentabilidade em toda a cadeia têxtil.
 
 ---
+
 
 Com o lançamento do **TENCEL™ Liocel HV100**, a **Lenzing** reafirma seu compromisso com a **inovação sustentável**, capacitando a cadeia de valor a criar produtos que unem **responsabilidade ambiental** e **design versátil**.
