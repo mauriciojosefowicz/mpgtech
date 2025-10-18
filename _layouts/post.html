@@ -24,3 +24,17 @@ layout: default
     <a href="{{ '/' | relative_url }}">← Voltar ao site</a>
   </p>
 </article>
+
+<!-- Script seguro: só corrige cliques nas âncoras dentro das páginas do blog -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const destino = link.getAttribute('href');
+      // Redireciona para a home + o hash escolhido
+      window.location.href = "/" + destino;
+    });
+  });
+});
+</script>
