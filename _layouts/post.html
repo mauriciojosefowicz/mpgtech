@@ -21,26 +21,7 @@ layout: default
   </div>
 
   <p style="margin-top:40px;">
-    <a href="{{ '/' | relative_url }}">← Voltar ao site</a>
+    <a href="/mpgtech/">← Voltar ao site</a>
   </p>
 </article>
 
-<!-- Script seguro: redireciona corretamente para seções da home -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll('a').forEach(link => {
-    const href = link.getAttribute('href');
-
-    // Garante que o link exista e aponte para uma âncora da home
-    if (href && (href.startsWith("#") || href.startsWith("/#") || href.includes(window.location.origin + "/#"))) {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        // Isola o destino (sem domínio ou prefixos)
-        const hash = href.replace(window.location.origin, "").replace(/^\/?/, "");
-        window.location.href = "/" + hash;
-      });
-    }
-  });
-});
-</script>
