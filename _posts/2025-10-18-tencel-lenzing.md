@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lançamento da Nova Fibra TENCEL™ Liocel HV100 pela Lenzing"
+title: "Lançamento Nova Fibra TENCEL™ Liocel HV100 - Lenzing"
 date: 2025-10-18
 image: "/imagens/posts/tencel_lenzing.jpg"
 excerpt: "O que o consumidor espera da moda nacional em 2026."
@@ -43,4 +43,5 @@ A Lenzing continua expandindo as possibilidades de **design responsável**, 
 
 
 Com o lançamento do **TENCEL™ Liocel HV100**, a **Lenzing** reafirma seu compromisso com a **inovação sustentável**, capacitando a cadeia de valor a criar produtos que unem **responsabilidade ambiental** e **design versátil**.
+
 
