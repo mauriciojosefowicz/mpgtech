@@ -25,16 +25,22 @@ layout: default
   </p>
 </article>
 
-<!-- Script seguro: só corrige cliques nas âncoras dentro das páginas do blog -->
+<!-- Script seguro: redireciona corretamente para seções da home -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      const destino = link.getAttribute('href');
-      // Redireciona para a home + o hash escolhido
-      window.location.href = "/" + destino;
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('a').forEach(link => {
+    const href = link.getAttribute('href');
+
+    // Garante que o link exista e aponte para uma âncora da home
+    if (href && (href.startsWith("#") || href.startsWith("/#") || href.includes(window.location.origin + "/#"))) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // Isola o destino (sem domínio ou prefixos)
+        const hash = href.replace(window.location.origin, "").replace(/^\/?/, "");
+        window.location.href = "/" + hash;
+      });
+    }
   });
 });
 </script>
