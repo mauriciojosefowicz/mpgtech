@@ -73,8 +73,11 @@ title: "MPG Tech | Soluções Têxteis"
     <p>Os fios de poliamida importados e distribuídos pela Cremer Erzkontor são sinônimo de tecnologia e performance no desenvolvimento de tecidos.</p>
     <p>Ofereço acesso direto a este insumo de alto valor, ideal para produtos que exigem toque macio, resistência e excelência em malharia e tecelagem.</p>
     <ul>
-      <li>Distribuição, importação direta e financiamento de importação.</li>
-      <li>Especificações técnicas e prazos sob consulta.</li>
+      <li>✅ Venda no mercado local por distribuição.</li>
+      <li>✅ Importação por conta e ordem de terceiros.</li>
+      <li>✅ Financiamento de importações.</li>
+      <li>✅ Venda por encomenda.</li>
+      <li>✅ Especificações técnicas e prazos sob consulta.</li>
     </ul>
   </section>
 
