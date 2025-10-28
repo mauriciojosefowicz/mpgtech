@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tecido nano recoberto: Revolução em roupas de proteção para bombeiros"
+title: "Tecido nano-recoberto: Revolução em roupas de proteção para bombeiros"
 date: 2025-10-27
 image: "/imagens/posts/safmax_linkedin.jpg"
 excerpt: "Revolução em roupas de proteção para bombeiros."
@@ -62,4 +62,5 @@ excerpt: "Revolução em roupas de proteção para bombeiros."
 
   <p><strong>#Inovação #Segurança #Bombeiros #Tecnologia #TecidoResistente #Têxtil</strong></p>
 </section>
+
 
