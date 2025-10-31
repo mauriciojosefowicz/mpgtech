@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Aumento da Produção de Poliéster Virgem para uso no Têxtil: Uma Questão Preocupante"
-date: 2025-10-27
-image: "/imagens/posts/recicled_fibers_blog.jpg"
+date: 2025-10-31
+image: "/imagens/posts/recicled_fiber_blog.jpg"
 excerpt: "Sustentabilidade vs Fibra de Poliéster Virgem"
 ---
 
@@ -73,4 +73,5 @@ excerpt: "Sustentabilidade vs Fibra de Poliéster Virgem"
   </p>
 
   <p><strong>#ModaSustentável #PoliésterVirgem #ReciclagemTêxtil #FibrasTêxteis #Sustentabilidade #Têxtil #Confecção #FiosTêxteis</strong></p>
+
 </section>
