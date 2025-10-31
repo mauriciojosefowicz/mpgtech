@@ -7,7 +7,7 @@ excerpt: "Sustentabilidade vs Fibra de Poliéster Virgem"
 ---
 
 <section class="post-conteudo">
-  <h1>Aumento da Produção de Poliéster Virgem para uso no Têxtil: Uma Questão Preocupante</h1>
+  <h1>Sustentabilidade vs Fibras Sintéticas </h1>
 
   <h2>📈 Crescimento das Fibras Têxteis</h2>
   <p>
@@ -75,3 +75,4 @@ excerpt: "Sustentabilidade vs Fibra de Poliéster Virgem"
   <p><strong>#ModaSustentável #PoliésterVirgem #ReciclagemTêxtil #FibrasTêxteis #Sustentabilidade #Têxtil #Confecção #FiosTêxteis</strong></p>
 
 </section>
+
