@@ -18,15 +18,15 @@ title: "MPG Tech | Soluções Têxteis"
     <div class="carrossel-3x1" id="carrossel-circulo">
       <div class="carrossel-lista-imagens">
         <img src="{{ site.baseurl }}/imagens/circulo_linha_120_2.png" alt="">
-        <img src="{{ site.baseurl }}/imagens/circulo_fitas_1.png" alt="">
-        <img src="{{ site.baseurl }}/imagens/circulo_linha_overlock_1.png" alt="">
-        <img src="{{ site.baseurl }}/imagens/circulo_ziper_1.png" alt="">
-        <img src="{{ site.baseurl }}/imagens/circulo_colas.png" alt="">
-        <img src="{{ site.baseurl }}/imagens/circulo_tesoura.png" alt="">
         <img src="{{ site.baseurl }}/imagens/circulo_entretela_png.png" alt="">
         <img src="{{ site.baseurl }}/imagens/circulo_matelasse_png.png" alt="">
         <img src="{{ site.baseurl }}/imagens/circulo_helanca_png.png" alt="">
         <img src="{{ site.baseurl }}/imagens/circulo_pesponto_png.png" alt="">
+        <img src="{{ site.baseurl }}/imagens/circulo_linha_overlock_1.png" alt="">
+        <img src="{{ site.baseurl }}/imagens/circulo_ziper_1.png" alt="">
+        <img src="{{ site.baseurl }}/imagens/circulo_colas.png" alt="">
+        <img src="{{ site.baseurl }}/imagens/circulo_fitas_1.png" alt="">
+        <img src="{{ site.baseurl }}/imagens/circulo_tesoura.png" alt="">
       </div>
     </div>
     <p>Representando a linha completa de insumos essenciais para a sua confecção. Fornecimento direto e consultoria para especificação correta de produtos, garantindo performance e durabilidade em todas as etapas de costura e acabamento.</p>
