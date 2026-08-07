@@ -23,12 +23,19 @@ title: "MPG Tech | Soluções Têxteis"
         <img src="{{ site.baseurl }}/imagens/circulo_ziper_1.png" alt="">
         <img src="{{ site.baseurl }}/imagens/circulo_colas.png" alt="">
         <img src="{{ site.baseurl }}/imagens/circulo_tesoura.png" alt="">
+        <img src="{{ site.baseurl }}/imagens/circulo_entretela_png.png" alt="">
+        <img src="{{ site.baseurl }}/imagens/circulo_matelasse_png.png" alt="">
+        <img src="{{ site.baseurl }}/imagens/circulo_helanca_png.png" alt="">
+        <img src="{{ site.baseurl }}/imagens/circulo_pesponto_png.png" alt="">
       </div>
     </div>
     <p>Representando a linha completa de insumos essenciais para a sua confecção. Fornecimento direto e consultoria para especificação correta de produtos, garantindo performance e durabilidade em todas as etapas de costura e acabamento.</p>
   <ul>
     <li>Linhas de costura, reta e overlock, de alta resistência, para máquinas de alto desempenho.</li>
     <li>Zíperes para diversos segmentos e aplicações | fixo | destacável | invisível | metal | tratorado.</li>
+    <li>Fio de Helanca para costurar suas peças de lingerie, moda praia e fitness.</li>
+    <li>Linha de Pesponto para seu jeans.</li>
+    <li>Entretelas para alfaiataria.</li>
     <li>Ampla variedade de aviamentos e acessórios, como tesouras, colas, fitas e muito mais.</li>
   </ul>
   </section>
